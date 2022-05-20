@@ -1,0 +1,18 @@
+.container {
+  /* background-color: antiquewhite; */
+  width: 100vw;
+}
+
+.radio {
+  /* background-color: cadetblue; */
+  margin: auto;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
