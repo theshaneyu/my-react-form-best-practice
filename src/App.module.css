@@ -3,16 +3,15 @@
   width: 100vw;
 }
 
-.radio {
-  /* background-color: cadetblue; */
+.content {
+  /* background-color: honeydew; */
   margin: auto;
   max-width: 720px;
+}
+
+.radio {
+  /* background-color: cadetblue; */
   display: flex;
   justify-content: center;
   padding: 3rem 0;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
 }

@@ -12,19 +12,19 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.radio}>
-        <Radio.Group
-          options={[
-            { label: 'antd', value: 'antd' },
-            { label: 'chakra', value: 'chakra' },
-          ]}
-          onChange={e => setDesignSystem(e.target.value)}
-          value={designSystem}
-          optionType="button"
-        />
-      </div>
+      <div className={styles.content}>
+        <div className={styles.radio}>
+          <Radio.Group
+            options={[
+              { label: 'antd', value: 'antd' },
+              { label: 'chakra', value: 'chakra' },
+            ]}
+            onChange={e => setDesignSystem(e.target.value)}
+            value={designSystem}
+            optionType="button"
+          />
+        </div>
 
-      <div className={styles.form}>
         {designSystem === 'antd' ? <AntdForm /> : <ChakraForm />}
       </div>
     </div>
