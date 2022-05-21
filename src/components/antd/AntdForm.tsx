@@ -2,6 +2,7 @@ import { Button } from 'antd';
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 
+import { yupSchema } from '../../lib/yupSchema';
 import styles from './styles/AntdForm.module.css';
 import { TextField } from './TextField';
 
@@ -15,25 +16,37 @@ export const AntdForm: React.FC = () => {
 
           actions.resetForm();
         }}
+        validationSchema={yupSchema}
       >
-        {({ values }) => (
+        {({ values, errors }) => (
           <>
             <Form className={styles.form}>
-              <Field
-                name="firstName"
-                component={TextField}
-                placeholder="First Name"
-                className={styles.field}
-              />
+              <div className={styles.field}>
+                <Field
+                  name="firstName"
+                  component={TextField}
+                  placeholder="First Name"
+                />
+              </div>
 
-              <Field
-                name="lastName"
-                component={TextField}
-                placeholder="Last Name"
-                className={styles.field}
-              />
+              <div className={styles.field}>
+                <Field
+                  name="lastName"
+                  component={TextField}
+                  placeholder="Last Name"
+                />
+              </div>
 
-              <Button type="primary" htmlType="submit">
+              <Button
+                disabled={
+                  !values.firstName ||
+                  !values.lastName ||
+                  !!errors.firstName ||
+                  !!errors.lastName
+                }
+                type="primary"
+                htmlType="submit"
+              >
                 submit
               </Button>
             </Form>

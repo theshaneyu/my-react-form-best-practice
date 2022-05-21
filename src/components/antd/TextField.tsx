@@ -34,6 +34,9 @@ export const TextField: React.FC<FieldProps<string>> = ({
   return (
     <div>
       <Input {...field} {...props} />
+      {errorText && (
+        <p style={{ fontSize: 1, color: 'red', marginTop: 3 }}>{errorText}</p>
+      )}
     </div>
   );
 };
