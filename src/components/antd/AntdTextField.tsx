@@ -10,7 +10,7 @@ import { FieldProps, getIn } from 'formik';
  *
  * These three are all bound to <Input /> through `{...field}`
  */
-export const TextField: React.FC<FieldProps<string>> = ({
+export const AntdTextField: React.FC<FieldProps<string>> = ({
   field,
   form,
   ...props

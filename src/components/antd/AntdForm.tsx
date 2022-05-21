@@ -3,8 +3,8 @@ import { Field, Form, Formik } from 'formik';
 import React from 'react';
 
 import { yupSchema } from '../../lib/yupSchema';
+import { AntdTextField } from './AntdTextField';
 import styles from './styles/AntdForm.module.css';
-import { TextField } from './TextField';
 
 export const AntdForm: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ export const AntdForm: React.FC = () => {
               <div className={styles.field}>
                 <Field
                   name="firstName"
-                  component={TextField}
+                  component={AntdTextField}
                   placeholder="First Name"
                 />
               </div>
@@ -32,7 +32,7 @@ export const AntdForm: React.FC = () => {
               <div className={styles.field}>
                 <Field
                   name="lastName"
-                  component={TextField}
+                  component={AntdTextField}
                   placeholder="Last Name"
                 />
               </div>
